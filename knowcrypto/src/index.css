@@ -10,8 +10,24 @@ a{
   text-decoration: none;
   color: inherit;
 }
-.app{
-  min-height: 100vh;
+body {
+  margin: 0;
+  height: 100vh;
   color: white;
-  background: linear-gradient(135deg, #C33764 10%, #1D2671 100%);
+  background: linear-gradient(-45deg, #ff0000, #a0005f, #6000a0, #400060);
+  background-size: 400% 400%;
+  animation: bg 6s ease infinite;
 }
+
+@keyframes bg {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+

@@ -44,4 +44,4 @@ CoinContextProvider.propTypes = {
   children: PropTypes.node.isRequired 
 };
 
-export default CoinContextProvider;
+export default CoinContextProvider; 

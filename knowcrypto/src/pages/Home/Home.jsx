@@ -3,8 +3,11 @@ import { useContext, useEffect, useState } from 'react'
 import './Home.css'
 import { CoinContext } from '../../context/CoinContext'
 import { Link } from 'react-router-dom'
+import { TypeAnimation } from 'react-type-animation'
 
 const Home = () => {
+
+   
 
 const {allCoin, currency} = useContext(CoinContext);
 const [displayCoin, setDisplayCoin] = useState([]);
@@ -31,9 +34,22 @@ useEffect(()=>{
   return (
     <div className='home'>
         <div className="hero">
-            <h1>Largest Crypto<br /> Marketplace</h1>
-            <p>Welcome to the world's largest cryptocurrency marketplace. 
-                Sign up to explore more about cryptos.</p>
+            <h1>
+                Welcome to <br/>
+            <TypeAnimation
+      sequence={[
+        
+        'Knowcrypto...',
+        2000, 
+        
+
+      ]}
+      wrapper="span"
+      speed={50}
+      repeat={Infinity}
+    />
+            </h1>
+            <p>Explore real-time cryptocurrency prices, market trends, and insights—all in one place with Knowcrypto</p>
             <form onSubmit={searchHandler}>
                 <input onChange={inputHandler} list='coinlist' value={input} type="text" placeholder='Search crypto..' required/>
                 
